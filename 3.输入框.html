@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/element/theme-chalk/index.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-input v-model="input" placeholder="请输入内容" clearable @clear="fn"></el-input>
+    <el-input v-model="input" prefix-icon="el-icon-search"></el-input>
+    <el-input v-model="input">
+        <i slot="prefix" class="el-input__icon el-icon-search"></i>
+    </el-input> 
+  </div>
+  <script src="./lib/vue.js"></script>
+  <script src="./lib/element/index.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        input:''
+      },
+      methods: {
+          fn(){
+              console.log(111)
+          }
+      }
+    });
+  </script>
+</body>
+
+</html>

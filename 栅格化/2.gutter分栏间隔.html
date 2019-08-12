@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../lib/element/theme-chalk/index.css">
+  <style>
+      *{
+      box-sizing: border-box;
+    }
+      html,body{
+          margin:0;
+          padding:0;
+      }
+      html,body,#app{
+          width:100%;
+      }
+      #app{
+        margin:0 auto;
+      }
+      .el-row{
+          width:100%;
+      }
+      .el-col:nth-child(4n){
+          background:green;
+      }
+      .el-col:nth-child(4n+1){
+          background:purple;
+      }
+      .el-col:nth-child(4n+2){
+          background:blue;
+      }
+      .el-col:nth-child(4n+3){
+          background:red;
+      }
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+        <el-row :gutter="100" style="margin-left:0;">
+            <el-col :span="6"><div class="grid-content bg-purple">测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下</div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple">测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下</div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple">测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下</div></el-col>
+            <el-col :span="6"><div class="grid-content bg-purple">测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下测试一下</div></el-col>
+        </el-row>          
+  </div>
+  <script src="../lib/vue.js"></script>
+  <script src="../lib/element/index.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {},
+      methods: {}
+    });
+  </script>
+</body>
+
+</html>

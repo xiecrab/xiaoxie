@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../lib/element/theme-chalk/index.css">
+  <style>
+      .el-col{
+          height:40px;
+      }
+      .el-col:nth-child(6n){
+          background:blue;
+      }
+      .el-col:nth-child(6n+1){
+          background:green;
+      }
+      .el-col:nth-child(6n+2){
+          background:purple;
+      }
+      .el-col:nth-child(6n+3){
+          background:red;
+      }
+      .el-col:nth-child(6n+4){
+          background:yellowgreen;
+      }
+      .el-col:nth-child(6n+5){
+          background:darkseagreen;
+      }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+        <el-row>
+                <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
+              </el-row>
+              <el-row>
+                <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
+                <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
+              </el-row>
+              <el-row>
+                <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+                <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
+                <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
+              </el-row>
+              <el-row>
+                <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+                <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+                <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+                <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
+              </el-row>
+              <el-row>
+                <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+                <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+                <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+                <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+                <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
+                <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
+              </el-row>
+  </div>
+  <script src="../lib/vue.js"></script>
+  <script src="../lib/element/index.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {},
+      methods: {}
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/element/theme-chalk/index.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-tree :data="data" :props="defaultProps" @node-click="fn" show-checkbox default-expand-all node-key="id" :default-checked-keys="[2]"></el-tree>
+  </div>
+  <script src="./lib/vue.js"></script>
+  <script src="./lib/element/index.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        data: [
+          {
+            id:1,
+            title: '一级标题1',
+            son:[
+              {id:6,title:'二级标题1',son:[
+                {id:8,title:'三级标题1'},
+                {id:9,title:'三级标题2'}
+              ]},
+              {id:7,title:'二级标题2'}
+            ]
+          },
+          {
+            id:2,
+            title: '一级标题2',
+          },
+          {
+            id:3,
+            title: '一级标题3',
+          },
+          {
+            id:4,
+            title: '一级标题4',
+          },
+          {
+            id:5,
+            title: '一级标题5',
+          },
+        ],
+        defaultProps: {
+          children: 'son',
+          label: 'title'
+        }
+      },
+      methods: {
+        fn(data){
+          console.log(data)
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

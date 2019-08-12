@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/element/theme-chalk/index.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <el-button>按钮</el-button>
+        <el-button type="primary">按钮</el-button>
+        <el-button type="success">按钮</el-button>
+        <el-button type="primary" size="mini" plain loading>按钮</el-button>
+        <el-button type="primary" :loading="true">加载中</el-button>
+        <!-- 图标按钮的两种写法 -->
+        <el-button type="primary" icon="el-icon-search">搜索</el-button>
+        <el-button type="primary">上传<i class="el-icon-upload el-icon--right"></i></el-button>
+
+    </div>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/element/index.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+
+            },
+            methods: {}
+        });
+    </script>
+</body>
+
+</html>

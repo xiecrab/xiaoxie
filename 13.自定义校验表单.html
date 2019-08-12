@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/element/theme-chalk/index.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-form ref="form" :model="form" :rules="formRules">
+        <el-form-item prop="name">
+            <el-input v-model="form.name"></el-input>
+        </el-form-item>
+    </el-form>
+  </div>
+  <script src="./lib/vue.js"></script>
+  <script src="./lib/element/index.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: function(){
+        var checkName = (rule, value, callback) => {
+            if (value.trim.length == 0) {
+                return callback(new Error('姓名不能为空'));
+            }else{
+                return callback()
+            }
+        };
+        return {
+          form:{
+              name:''
+          },
+          formRules:{
+            name: [
+                { validator:checkName, trigger: 'blur' }
+            ],
+          }
+        }
+      },
+      methods: {}
+    });
+  </script>
+</body>
+
+</html>

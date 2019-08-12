@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var checkMobile = (cb) => {
+      if(true) {
+        return cb(new Error('请输入合法的手机号'))
+      } else {
+        return cb()
+      }
+    }
+    checkMobile(function(err) {
+      if(err) {
+        console.log('出错啦')
+      } else {
+        console.log('没有出错')
+      }
+    })   
+  </script>
+</body>
+
+</html>

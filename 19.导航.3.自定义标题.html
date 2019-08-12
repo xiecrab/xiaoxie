@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/element/theme-chalk/index.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+        <el-menu default-active="1"  mode="vertical">
+            <el-menu-item index="1">
+                <template slot="title">
+                    <i class="el-icon-location"></i>
+                    <span>导航一</span>
+                </template>
+            </el-menu-item>
+            <el-menu-item index="2">我的工作台</el-menu-item>
+            <el-menu-item index="3">消息管理</el-menu-item>
+            <el-menu-item index="4">订单中心</el-menu-item>
+        </el-menu>
+  </div>
+  <script src="./lib/vue.js"></script>
+  <script src="./lib/element/index.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {},
+      methods: {}
+    });
+  </script>
+</body>
+
+</html>
